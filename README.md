@@ -19,7 +19,7 @@ Use your knowledge of object-oriented programming, one-dimensional (1D) arrays, 
 
 Include a hyperlink to the source of your dataset used for this project. Additionally, provide a short description of each column used from the dataset, and the data type.
 
-Example:
+Example: 
 
 Dataset: https://www.kaggle.com/datasets/sansuthi/global-co2-emissions
 
@@ -27,11 +27,17 @@ Dataset: https://www.kaggle.com/datasets/sansuthi/global-co2-emissions
 - **Population** (int) - number of people in the country
 - **CO2Emissions** (double) - carbon dioxide emission in kilotons
 
+Dataset: 
+https://studio.code.org/s/csa4-2024/lessons/8/levels/5
+https://docs.google.com/spreadsheets/d/1lCEpVTYtGUYBD-_efe33KpcCRJv7xLKwD4Q126KwyRI/edit?gid=1638692842#gid=1638692842
+https://thedogapi.com/
+
+
 ## UML Diagram
 
 Put and image of your UML Diagram here. Upload the image of your UML Diagram to your repository, then use the Markdown syntax to insert your image here. Make sure your image file name is one work, otherwise it might not properly get display on this README.
 
-![UML Diagram for my project](nameOfImageFileHere.png)
+![UML Diagram for my project](![alt text](<Screenshot 2024-12-10 182655.png>))
 
 ## Video Demo
 
@@ -48,3 +54,5 @@ Record a short video of your abstract art animation to display here on your READ
 ## Description
 
 Write a description of your project here. In your description, include as many vocab words from our class to explain your User Story, the chosen dataset and how your project addressed that users goals. If your project used the Scanner class for user input, explain how the user will interact with your project.
+
+In our project, we wanted to use types of dog breeds and use it too find the average of their weight. The type of breeds are categorized of traits they tend to have and with the weight, it may appeal to customers because some prefer either small, big, and even medium sized dogs. In our code, we use constructors then accessor methods to use in our DataScene class. In there, we created a 1D array so we can use the txt files of it, and when it came to drawing the actual scene, we printed out the images using if else statements along with equals operator so we can match the correct avg weight with the dog shown. 
