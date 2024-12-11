@@ -36,12 +36,71 @@ public class DataScene extends Scene {
 
     
     for (Dog dog : dogs) {
-      clear("black");
+      drawBackground(dog);
 
 playSound("aaa.wav");
+drawDogImage(dog);
+      
+      
+      
+       
+      
+      
+      
+
+      setTextStyle(Font.MONO, FontStyle.BOLD);
+      setTextHeight(25);
+      setTextColor("pink");
+
+     
+drawDogInfo(dog);
+playSound("woof.wav");
+      
+      pause(0.5);
 
       
-      if(dog.getBreed().equals("Toy")) {
+    }
+  }
+
+  /** Other Methods */
+  public  void drawBackground(Dog dog) {
+    // add code to change the background base on info of the dog
+     if(dog.getBreed().equals("Toy")) {
+        clear("black");
+      } else if (dog.getBreed().equals("Hound")) {
+        clear("blue");
+      } else if (dog.getBreed().equals("Terrier")) {
+        clear("orange");
+      } else if (dog.getBreed().equals("Working")) {
+       clear("red");
+      } else if (dog.getBreed().equals("Mixed")) {
+        clear("green");
+      } else if (dog.getBreed().equals("Non-Sporting")) {
+        clear("purple");
+      } else if (dog.getBreed().equals("Sporting")) {
+       clear("yellow");
+      } else if (dog.getBreed().equals("Herding")) {
+        clear("white");
+      }
+  }
+  
+  public double calcAvgerageWeight(int min, int max) {
+    int total = min + max;
+    double avg = total / 2;
+    return avg;
+  }
+
+public void drawDogInfo(Dog dog) {
+   drawText(dog.getBreed(), 140, 300);
+      
+      int minWeight = dog.getMinWeight();
+      int maxWeight = dog.getMaxWeight();
+      double avgWeight = calcAvgerageWeight(minWeight, maxWeight);
+      drawText(avgWeight+" lbs", 140, 350);
+}
+  
+  public void drawDogImage(Dog dog) {
+    if(dog.getBreed().equals("Toy")) {
         drawImage("download-(4).jpg", 90, 50, 200);
       } else if (dog.getBreed().equals("Hound")) {
         drawImage("download-(5).jpg", 90, 50, 200);
@@ -58,34 +117,5 @@ playSound("aaa.wav");
       } else if (dog.getBreed().equals("Herding")) {
         drawImage("download-(11).jpg", 90, 50, 200);
       }
-       
-      
-      
-      
-
-      setTextStyle(Font.MONO, FontStyle.BOLD);
-      setTextHeight(25);
-      setTextColor("pink");
-
-      drawText(dog.getBreed(), 140, 300);
-      
-      int minWeight = dog.getMinWeight();
-      int maxWeight = dog.getMaxWeight();
-      double avgWeight = calcAvgerageWeight(minWeight, maxWeight);
-      drawText(avgWeight+" lbs", 140, 350);
-
-playSound("woof.wav");
-      
-      pause(0.5);
-
-      
-    }
-  }
-
-  /** Other Methods */
-  public double calcAvgerageWeight(int min, int max) {
-    int total = min + max;
-    double avg = total / 2;
-    return avg;
   }
 }
