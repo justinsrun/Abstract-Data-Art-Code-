@@ -38,6 +38,9 @@ public class DataScene extends Scene {
     for (Dog dog : dogs) {
       clear("black");
 
+playSound("aaa.wav");
+
+      
       if(dog.getBreed().equals("Toy")) {
         drawImage("download-(4).jpg", 90, 50, 200);
       } else if (dog.getBreed().equals("Hound")) {
@@ -71,6 +74,7 @@ public class DataScene extends Scene {
       double avgWeight = calcAvgerageWeight(minWeight, maxWeight);
       drawText(avgWeight+" lbs", 140, 350);
 
+playSound("woof.wav");
       
       pause(0.5);
 
